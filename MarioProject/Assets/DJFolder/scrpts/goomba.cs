@@ -19,6 +19,7 @@ public class goomba : MonoBehaviour
     {
         animator.Play("Wait");
         rb = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Mario");
         // "Mario" 태그로 설정된 오브젝트 찾기, hierachy에서 마리오에 태그 설정
 
     }
@@ -50,7 +51,7 @@ public class goomba : MonoBehaviour
     // 플레이어와 충돌했을 때 호출되는 함수
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Mario"))
+        if (collision.gameObject.CompareTag("NormalMario"))
         {
             // 만약 마리오가 굼바 위에 있고, 아래 방향으로 내려온다면
             if (collision.contacts[0].normal.y > 0.5f)
@@ -59,8 +60,14 @@ public class goomba : MonoBehaviour
             }
             else
             {
+                GameController.Instance.PlayerDamaged();
                 //마리오와 굼바가 충돌했을 때
             }
+        }
+        else if (collision.gameObject.CompareTag("CatMario"))
+        {
+            Destroy(gameObject);
+            //고양이 마리오와 충돌했을 때
         }
     }
 }
