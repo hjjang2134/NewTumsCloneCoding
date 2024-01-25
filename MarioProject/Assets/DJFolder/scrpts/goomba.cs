@@ -48,6 +48,12 @@ public class goomba : MonoBehaviour
         rb.MovePosition(transform.position + movement);
     }
 
+    public void TakeDamage()
+    {
+        animator.Play("attacked");
+        Destroy(gameObject);
+    }
+
     // 플레이어와 충돌했을 때 호출되는 함수
     void OnCollisionEnter(Collision collision)
     {
