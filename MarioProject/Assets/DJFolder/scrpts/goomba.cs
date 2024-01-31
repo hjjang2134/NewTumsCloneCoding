@@ -3,6 +3,7 @@ using UnityEngine;
 public class goomba : MonoBehaviour
 {
     public float movementSpeed = 2f; // 굼바의 이동 속도
+    public float rotationSpeed = 15f; // 굼바의 회전 속도
     public float detectionRadius = 5f; // 마리오를 감지할 반경, 추후 변경 필요
 
     private Rigidbody rb;
@@ -33,6 +34,7 @@ public class goomba : MonoBehaviour
             if (distanceToPlayer <= detectionRadius)
             {
                 MoveTowardsMario(); // 마리오를 향해 이동
+                RotateTowardsPlayer(); // 플레이어를 향해 회전
             }
         }
     }
@@ -44,8 +46,18 @@ public class goomba : MonoBehaviour
         Vector3 movement = direction * movementSpeed * Time.deltaTime;
 
         // 굼바 이동
-        animator.Play("Noesis Frames");
+        animator.Play("Run");
         rb.MovePosition(transform.position + movement);
+    }
+
+    void RotateTowardsPlayer()
+    {
+        // 플레이어를 향하는 방향 벡터 계산
+        Vector3 direction = (player.transform.position - transform.position).normalized;
+
+        // 굼바가 플레이어를 향하도록 회전
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
     public void TakeDamage()
@@ -57,7 +69,7 @@ public class goomba : MonoBehaviour
     // 플레이어와 충돌했을 때 호출되는 함수
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("NormalMario"))
+        if (collision.gameObject.CompareTag("Mario"))
         {
             // 만약 마리오가 굼바 위에 있고, 아래 방향으로 내려온다면
             if (collision.contacts[0].normal.y > 0.5f)
@@ -66,14 +78,10 @@ public class goomba : MonoBehaviour
             }
             else
             {
+                animator.Play("attack");
                 GameController.Instance.PlayerDamaged();
                 //마리오와 굼바가 충돌했을 때
             }
-        }
-        else if (collision.gameObject.CompareTag("CatMario"))
-        {
-            Destroy(gameObject);
-            //고양이 마리오와 충돌했을 때
         }
     }
 }
