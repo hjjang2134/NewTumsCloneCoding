@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class goomba : MonoBehaviour
 {
-    public float movementSpeed = 2f; // 굼바의 이동 속도
+    public float movementSpeed = 5f; // 굼바의 이동 속도
     public float rotationSpeed = 15f; // 굼바의 회전 속도
-    public float detectionRadius = 5f; // 마리오를 감지할 반경, 추후 변경 필요
+    public float detectionRadius = 30f; // 마리오를 감지할 반경, 추후 변경 필요
 
     private Rigidbody rb;
     public GameObject player; // 마리오 객체
