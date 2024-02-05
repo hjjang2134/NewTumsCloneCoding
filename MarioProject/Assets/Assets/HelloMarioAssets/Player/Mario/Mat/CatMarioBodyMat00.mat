@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GreenCoinMat00
+  m_Name: CatMarioBodyMat00
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -31,7 +31,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 068b4316fd7941142b02b67f6ca8a34b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 008c81a1b49e7f04e9551ba7ebf61e25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -67,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c3aeb35e3d5f8c04baf7c733edc6e6b9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4f5dcc215fe40624cbdf4c19e3e5ecf4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskGloss:
@@ -87,7 +87,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 068b4316fd7941142b02b67f6ca8a34b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 008c81a1b49e7f04e9551ba7ebf61e25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -133,7 +133,6 @@ Material:
     - _DoubleSidedOutline: 1
     - _DstBlend: 0
     - _DynamicNoisyOutline: 0
-    - _EOPO: 0
     - _EnableTextureTransparent: 0
     - _EnvironmentalLightingIntensity: 1
     - _FarDistanceMaxWidth: 10
@@ -196,10 +195,9 @@ Material:
     - _PTexturePower: 1
     - _Parallax: 0.02
     - _PointLightSVD: 0
-    - _PointSpotlightIntensity: 0.3
+    - _PointSpotlightIntensity: 0.45
     - _ReduceShadowPointLight: 0
     - _ReduceShadowSpotDirectionalLight: 10
-    - _ReduceTextureQuality: 0
     - _RefMetallic: 0
     - _RefVal: 0
     - _ReflectionIntensity: 0
@@ -224,9 +222,8 @@ Material:
     - _ShadowTColorPower: 1
     - _ShadowTHardness: 1
     - _ShadowTIntensity: 1
-    - _ShadowTLightThreshold: 0.5
+    - _ShadowTLightThreshold: 50
     - _ShadowTShadowThreshold: 0
-    - _ShowInAmbientLightIntensity: 1
     - _ShowInAmbientLightShadowIntensity: 1
     - _ShowInAmbientLightShadowThreshold: 0.4
     - _ShowNormal: 0
@@ -236,7 +233,6 @@ Material:
     - _SrcBlend: 1
     - _TexturePatternStyle: 0
     - _UVSec: 0
-    - _UseFReflection: 0
     - _UseSecondaryCutout: 0
     - _VertexColorBlueControlSmoothObjectNormal: 0
     - _VertexColorGreenControlSelfShadowThreshold: 0
@@ -244,12 +240,12 @@ Material:
     - _XYZHardness: 14
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.8415082, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.73889667, b: 0, a: 1}
     - _CustomLightDirection: {r: 0, g: 0, b: 10, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.7843137, g: 0.7843137, b: 0.7843137, a: 1}
+    - _MainColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}

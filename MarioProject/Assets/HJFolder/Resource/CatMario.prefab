@@ -2262,7 +2262,7 @@ GameObject:
   - component: {fileID: 2265941051413711943}
   - component: {fileID: 5569986605814937159}
   m_Layer: 0
-  m_Name: Mario
+  m_Name: CatMario
   m_TagString: Mario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2311,7 +2311,7 @@ Transform:
   - {fileID: 4149741706137105005}
   - {fileID: 3568286115753987211}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6524353635516106527
 MonoBehaviour:
@@ -5026,7 +5026,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 10845279d5a3c1049aa2b82b774e8b17, type: 2}
+  - {fileID: 2100000, guid: 58995ccfcfc381143b70f2e27883bb53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

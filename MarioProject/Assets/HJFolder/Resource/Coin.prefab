@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 847674774723776704, guid: 7d1aa6c7286837f46a58384280a00f9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6de0602cbbb6ac141bde324e971813af, type: 2}
+      objectReference: {fileID: 2100000, guid: dfe2b16c0e70f0e49b933a18156290d0, type: 2}
     - target: {fileID: 847674774726958528, guid: 7d1aa6c7286837f46a58384280a00f9b, type: 3}
       propertyPath: m_Name
       value: Coin

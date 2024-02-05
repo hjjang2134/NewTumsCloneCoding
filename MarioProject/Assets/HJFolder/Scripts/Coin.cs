@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    public float rotationSpeed = 100f; //회전을 위한 
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,7 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.up, rotationSpeed * -1 * Time.deltaTime); //제자리회전
     }
     private void OnTriggerEnter(Collider collider)
     {
